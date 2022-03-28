@@ -7,7 +7,9 @@ import Card from './Components/Card/Card';
 import { useFetching } from './Components/Hooks/useFetching';
 import axios from "axios";
 import PostService from './Components/API/ApiCom.jsx'
-import Loader from './Components/Loader/Loader.jsx'
+import Loader from './Components/Loader/Loader.jsx';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 
 function App() {
@@ -37,18 +39,20 @@ function App() {
             <Select/>
         </div>
 
-        <div className='gg'>
-          {isLoading ?
-            <Loader/>
-            :
-            arrConries.map(country1 => 
+        {isLoading ?
+            <div className='loader'>
+              <CircularProgress size={100}/>
+            </div>
+          : <div className='gg'>
+            {arrConries.map(country1 => 
                 <Card country={country1}/>
-            )
+            )}
+            </div>
           }
           
           
 
-        </div>
+        
 
     </div>
   );
