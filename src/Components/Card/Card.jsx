@@ -2,6 +2,7 @@ import React from 'react';
 import classes from "./Card.module.css"
 
 const Card = ({country}) => {
+    // console.log(country)
 
     return (
         <div className={classes.card}>

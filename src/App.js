@@ -7,6 +7,7 @@ import Card from './Components/Card/Card';
 import { useFetching } from './Components/Hooks/useFetching';
 import axios from "axios";
 import PostService from './Components/API/ApiCom.jsx'
+import Loader from './Components/Loader/Loader.jsx'
 
 
 function App() {
@@ -16,10 +17,14 @@ function App() {
     // })
     const [arrConries, setArrContries] = useState([])
     
+
+    const [fetchCounties, isLoading] = useFetching(async () =>{
+      const responce = await PostService.getAll();
+      setArrContries(responce)
+    })
+
     useEffect(() => {
-      const responce = PostService.getAll()
-      responce.then(res => setArrContries(res))
-      console.log(responce)
+      fetchCounties()
     }, [])
     
   return (
@@ -33,15 +38,16 @@ function App() {
         </div>
 
         <div className='gg'>
-          {arrConries.map(country1 => 
-            <Card country={country1}/>
-          )}
+          {isLoading ?
+            <Loader/>
+            :
+            arrConries.map(country1 => 
+                <Card country={country1}/>
+            )
+          }
+          
+          
 
-        </div>
-    
-
-        <div style={{paddingTop: '200px'}}> 
-            fdbf
         </div>
 
     </div>
