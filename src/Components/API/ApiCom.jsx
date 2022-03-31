@@ -6,4 +6,9 @@ export default class PostService{
         const response = await axios.get('https://restcountries.com/v3.1/all');
         return response.data;
     }
+
+    static async getCard(country) {
+        const response = await axios.get(`https://restcountries.com/v3.1/alpha/${country}`);
+        return response.data;
+    }
 }

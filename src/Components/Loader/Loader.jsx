@@ -1,12 +1,13 @@
 import React from 'react';
-import cl from './Loader.module.css'
+import classes from './Loader.module.css';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 const Loader = () => {
-    console.log('Loader')
     return (
-        <div className={cl.loader}>
-
-        </div>
+        <div className={classes.loader}>
+        <CircularProgress size={100}/>
+      </div>
     );
 };
 

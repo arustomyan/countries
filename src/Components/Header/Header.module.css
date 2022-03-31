@@ -1,6 +1,10 @@
+.container {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+}
 
 .navBar {
-    width: 800px;
+    width: 1278px;
     display: flex;
     justify-content: space-between;
     align-items: center;

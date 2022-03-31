@@ -1,11 +1,14 @@
 import React from 'react';
 import classes from "./Card.module.css"
+import { useNavigate } from "react-router-dom";
+
 
 const Card = ({country}) => {
-    // console.log(country)
+    
+    const router = useNavigate()
 
     return (
-        <div className={classes.card}>
+        <div className={classes.card} onClick={() => router(`/${country.cca3}`)}>
         <div  className={classes.imgWrapper}>
             <img
             className={classes.cardImage}
