@@ -99,7 +99,8 @@ select:focus {
   margin: auto;
   justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: center
+  align-items: center;
+  padding-top: 100px;
   
 }
 
@@ -148,7 +149,6 @@ select:focus {
   display: flex;
   flex-wrap: wrap;
   row-gap: 12px;
-
 }
 
 .countryBorder p{

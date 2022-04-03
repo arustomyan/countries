@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './MyInput.module.css';
 
-const MyInput = ({placeholder}) => {
+const MyInput = React.forwardRef((props, ref) => {
     return (
-        <input type={'text'} className={classes.search} placeholder={placeholder}></input>
+        <input ref={ref} className={classes.search} {...props}/>
     );
-}
+})
 
 export default MyInput;

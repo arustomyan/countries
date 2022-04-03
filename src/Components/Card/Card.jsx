@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Card = ({country}) => {
     
     const router = useNavigate()
-
+    
     return (
         <div className={classes.card} onClick={() => router(`/${country.cca3}`)}>
         <div  className={classes.imgWrapper}>
@@ -30,8 +30,7 @@ const Card = ({country}) => {
                 </p>
             </div>
         </div>
-
-      </div>
+        </div>
     );
 }
 
