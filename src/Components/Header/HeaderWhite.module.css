@@ -31,4 +31,8 @@
     line-height: 22px;
     color: #111517;
   }
+
+  .container path {
+    fill: #552;
+  }
   

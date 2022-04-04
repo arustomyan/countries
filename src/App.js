@@ -1,29 +1,30 @@
 import React from 'react';
 import './styles/App.css';
 import Header from './Components/Header/Header';
-import { BrowserRouter, Link, Route, Routes} from 'react-router-dom';
-import Filter from './Components/Filter/Filter';
+import { BrowserRouter} from 'react-router-dom';
 import AppRouter from './Components/AppRouter';
-import axios from 'axios';
-import { useState } from 'react';
-import { Button } from '@material-ui/core';
+import {useState} from 'react'
+
+export const DarkModeContext = React.createContext()
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true)
 
-  const [res, setRes] = useState({})
+  function theme() {
+    setDarkMode(prev => !prev)
+    document.querySelector('body').classList.toggle('darkBody')
 
-async function name() {
-  const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,capital,currencies,flags,region,population,cca3')
-  setRes(response.data)
-}
+  }
+  
 
   return (
+    <DarkModeContext.Provider value={darkMode}>
     <BrowserRouter>
-        <Button onClick={name}>запрос</Button>
-        <Button onClick={() => console.log(res)} >ответ</Button>
-        <Header/>
-        <AppRouter />
+        <Header    theme={theme}/>
+        <AppRouter/>
     </BrowserRouter>
+    </DarkModeContext.Provider>
+
   );
 }
 

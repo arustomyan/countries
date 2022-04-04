@@ -1,10 +1,9 @@
-import Error from "../../Page/Error";
-import CountryDetails from "../CountryDetails/CountryDetails";
-import Cards from '../../Page/Cards/Cards';
+import Error from '../../Page/Error.jsx';
+import CountryDetails from "../../Page/CountryDetails/CountryDetails";
+import HomePage from '../../Page/HomePage/HomePage.jsx';
 
 export const routes = [
     {path: '*', element: <Error />},
-    {path: '/', element: <Cards />},
+    {path: '/', element: <HomePage />},
     {path: '/:country', element: <CountryDetails />}
-
 ]

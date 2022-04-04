@@ -1,13 +1,26 @@
 import React from 'react'
-import classes from '../Page/Cards/Cards.module.css';
 import Card from './Card/Card';
+
+const style = {
+  display: 'flex',
+  alignItems: 'center',
+  width: '1278px',
+  paddingTop: '20px',
+  margin: 'auto',
+  justifyContent: 'space-between',
+  flexWrap: 'wrap',
+  rowGap: '50px',
+  alignItems:'stretch',
+  marginBottom: '50px',
+  color: 'inherit'
+}
 
 function CardList({countries}) {
   return (
-    <div className={classes.cardsContainer}>
-    {countries.map(country => 
-        <Card country={country}/>
-    )}
+      <div style={style}>
+        {countries.map(country => 
+            <Card country={country} key={country.cca3}/>
+        )}
     </div>
   )
 }

@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
+
 import MyInput from '../UI/Input/MyInput'
 import MySelect from '../UI/Select/MySelect'
 import classes from './Filter.module.css'
-import { Button } from '@material-ui/core';
+import { DarkModeContext } from '../../App';
+
+
 
 const Filter = ({filter, setFilter}) => {
+
+    const darkMode = useContext(DarkModeContext);
+
+    const style = darkMode ? {backgroundColor: '#fff'} : {backgroundColor: '#2B3844'};
+
     return (
         <div className={classes.filterContainer}>
             <MyInput 
@@ -14,6 +22,7 @@ const Filter = ({filter, setFilter}) => {
                 onChange={(e) => {setFilter({...filter, query: e.target.value})}}
             />
             <MySelect
+                style={style}
                 value={filter.select}
                 onChange={selected => setFilter({...filter, select: selected})}
                 defaultValue="Select region"
@@ -25,7 +34,9 @@ const Filter = ({filter, setFilter}) => {
                     {value: 'Oceania', name: 'Oceania'},
                     {value: '', name: 'All'},
                 ]}
+
             />
+
         </div>
     );
 }

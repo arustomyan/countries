@@ -2,7 +2,10 @@ import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import {routes} from "./router/router";
 
-function AppRouter() {
+
+function AppRouter({darkMode}) {
+
+
 
   return (
     <Routes>
@@ -11,8 +14,10 @@ function AppRouter() {
                 path={route.path}
                 element={route.element}
                 key={route.path}
+                darkMode={darkMode}
             />)}
     </Routes>
+
   )
 }
 

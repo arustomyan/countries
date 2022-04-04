@@ -1,33 +1,33 @@
-import React, {useState, useEffect} from 'react';
-import Card from '../../Components/Card/Card.jsx';
-import Loader from '../../Components/Loader/Loader.jsx';
-import classes from './Cards.module.css';
-import PostService from '../../Components/API/ApiCom.jsx';
-import { useFetching } from './../../Components/Hooks/useFetching';
-import {useCountry} from './../../Components/Hooks/useCountry.js';
+import React, {useState, useEffect, useContext} from 'react';
+import Loader from '../../Components/UI/Loader/Loader.jsx';
+import RestApi from '../../Components/API/RestApi.jsx';
+import { useFetching } from '../../Components/Hooks/useFetching';
+import {useCountry} from '../../Components/Hooks/useCountry.js';
 import Filter from '../../Components/Filter/Filter.jsx';
 import CardList from '../../Components/CardList.jsx';
-import {useSelect} from './../../Components/Hooks/useCountry.js'
+import { DarkModeContext } from '../../App';
 
 
-let i = 1
-
-const Cards = () => {
+const HomePage = () => {
 
   const [arrConries, setArrContries] = useState([])
   const [filter, setFilter] = useState({query: '', select: ''})
 
+  const darkMode = useContext(DarkModeContext);
+
+
+
   const searchedCoutry = useCountry(arrConries, filter.select, filter.query)
 
   const [fetchCounties, isLoading] = useFetching(async () =>{
-    const responce = await PostService.getAll();
+    const responce = await RestApi.getAll();
     setArrContries(responce)
   })
  
   useEffect(() => {
     fetchCounties()
   }, [])
-    
+  
   return (
     <div>
       
@@ -42,4 +42,4 @@ const Cards = () => {
   )
 }
 
-export default Cards;
+export default HomePage;
