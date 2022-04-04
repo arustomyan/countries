@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/varustomyan/countries.git)
-- Live Site URL: [Add live site URL here](https://countries-puce.vercel.app/)
+- Solution URL: [https://github.com/varustomyan/countries.git](https://github.com/varustomyan/countries.git)
+- Live Site URL: [https://countries-puce.vercel.app](https://countries-puce.vercel.app/)
 
 ## My process
 
