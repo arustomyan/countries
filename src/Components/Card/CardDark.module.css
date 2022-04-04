@@ -7,7 +7,7 @@
     flex-direction: column;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.0294384);
     border-radius: 5px;
-    /* transition: 0.2s; */
+    transition: transform 0.2s;
     /* color: #fff */
   }
   
