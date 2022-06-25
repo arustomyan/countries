@@ -10,10 +10,10 @@ export const DarkModeContext = React.createContext({});
 function App() {
   const [darkMode, setDarkMode] = useState(true);
 
-  function theme() {
+  const theme = () => {
     setDarkMode((prev) => !prev);
     document.querySelector("body").classList.toggle("darkBody");
-  }
+  };
 
   return (
     <DarkModeContext.Provider value={darkMode}>
