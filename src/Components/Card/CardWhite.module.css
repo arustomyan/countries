@@ -1,58 +1,55 @@
-
 .card {
-    width: 264px;
-    min-height: 336px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
-    border-radius: 5px;
-    transition: transform 0.2s;
+  width: 264px;
+  min-height: 336px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.0294384);
+  border-radius: 5px;
+  transition: transform 0.2s;
 
-    color: inherit;
-  }
-  
-  .imgWrapper {
-    min-height: 176px;
-    margin-bottom: 24px;
-  }
-  
-  .cardImage {
-    border-radius: 5px 5px 0px 0px ;
-    max-width: 100%;
-    max-height: 100%;
-  }
+  color: inherit;
+}
 
-  .cardContentWrapper {
-    margin-left: 24px;
-  }
-  
-  .cardName {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 26px;
-  
-  }
+.imgWrapper {
+  min-height: 176px;
+  margin-bottom: 24px;
+}
 
-  .cardInfoWrapper {
-    margin-top: 16px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-  }
-  
-  .cardText {
-    font-weight: 300;
-    margin-bottom: 8px;
-  }
-  
-  .cardSpan {
-    font-weight: 600;
-  }
+.cardImage {
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+  max-height: 100%;
+}
 
-  .card:hover {
-    transform: scale(1.1);
-    /* transition: 0.2s; */
+.cardContentWrapper {
+  margin-left: 24px;
+}
 
-  }
+.cardName {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.cardInfoWrapper {
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cardText {
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.cardSpan {
+  font-weight: 600;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  /* transition: 0.2s; */
+}

@@ -5,23 +5,27 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
 }
 
-
 button {
   display: inline-block;
   box-shadow: none;
-  background-color: transparent;
-  background: none;
+  background: transparent none;
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   -webkit-appearance: none;
-  -moz-appearance:none;
+  -moz-appearance: none;
 }
 
 img {
@@ -31,16 +35,16 @@ img {
 }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .darkBody {
-  background-color: #202C36; 
+  background-color: #202c36;
   color: #fff;
 }
 
 #root {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -54,8 +58,3 @@ body {
   display: flex;
   justify-content: space-around;
 }
-
-
-
-
-

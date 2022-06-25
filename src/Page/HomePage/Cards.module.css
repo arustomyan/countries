@@ -1,19 +1,15 @@
 .cardsContainer {
-    display: flex;
-    align-items: center;
-    width: 1278px;
-    padding-top: 20px;
-    margin: auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 50px;
-    align-items:stretch;
-    margin-bottom: 50px;
-  }
+  display: flex;
+  width: 1278px;
+  padding-top: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  align-items: stretch;
+  margin: auto auto 50px;
+}
 
-  .cardsPage {
-    background: #FAFAFA;
-    color: #111517
-  }
-  
-  
+.cardsPage {
+  background: #fafafa;
+  color: #111517;
+}
