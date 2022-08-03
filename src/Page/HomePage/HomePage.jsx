@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Loader from "../../Components/UI/Loader/Loader.jsx";
-import RestApi from "../../Components/API/RestApi.jsx";
+import { useState, useEffect } from "react";
+import Loader from "../../Components/UI/Loader/Loader";
+import RestApi from "../../Components/API/RestApi";
 import { useFetching } from "../../Components/Hooks/useFetching";
-import { useCountry } from "../../Components/Hooks/useCountry.js";
-import Filter from "../../Components/Filter/Filter.jsx";
-import CardList from "../../Components/CardList.jsx";
+import { useCountry } from "../../Components/Hooks/useCountry";
+// eslint-disable-next-line import/no-cycle
+import Filter from "../../Components/Filter/Filter";
+// eslint-disable-next-line import/no-cycle
+import CardList from "../../Components/CardList";
 
-const HomePage = () => {
+function HomePage() {
   const [arrCountries, setArrCountries] = useState([]);
   const [filter, setFilter] = useState({ query: "", select: "" });
 
@@ -28,6 +30,6 @@ const HomePage = () => {
       {isLoading ? <Loader /> : <CardList countries={searchedCountry} />}
     </div>
   );
-};
+}
 
 export default HomePage;

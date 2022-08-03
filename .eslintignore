@@ -3,5 +3,6 @@ src/*
 !src/Page
 src/Page/*
 !src/Page/ErrorPage
+!src/Page/HomePage
 
 
