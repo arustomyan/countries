@@ -7,3 +7,4 @@ src/Components/UI/*
 !src/Components/UI/Button
 !src/Components/UI/Input
 !src/Components/UI/Loader
+!src/Components/UI/Select

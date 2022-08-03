@@ -1,7 +1,6 @@
-import React from "react";
 import whiteTheme from "./SelectWhiteMode.module.css";
 
-const MySelect = ({ option, defaultValue, value, onChange, style }) => {
+function MySelect({ option, defaultValue, value, onChange, style }) {
   return (
     <select
       value={value}
@@ -11,20 +10,20 @@ const MySelect = ({ option, defaultValue, value, onChange, style }) => {
       className={whiteTheme.selectRegion}
       style={style}
     >
-      <option disabled={true} value="">
+      <option disabled value="">
         {defaultValue}
       </option>
-      {option.map((option) => (
+      {option.map((item) => (
         <option
-          key={option.value}
-          value={option.value}
+          key={item.value}
+          value={item.value}
           className={whiteTheme.option}
         >
-          {option.name}
+          {item.name}
         </option>
       ))}
     </select>
   );
-};
+}
 
 export default MySelect;
