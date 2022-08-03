@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
+// eslint-disable-next-line import/no-cycle
 import MyInput from "../UI/Input/MyInput";
 import MySelect from "../UI/Select/MySelect";
 import classes from "./Filter.module.css";
+// eslint-disable-next-line import/no-cycle
 import { DarkModeContext } from "../../App";
 
-const Filter = ({ filter, setFilter }) => {
+function Filter({ filter, setFilter }) {
   const darkMode = useContext(DarkModeContext);
 
   const style = darkMode
@@ -14,8 +16,8 @@ const Filter = ({ filter, setFilter }) => {
   return (
     <div className={classes.filterContainer}>
       <MyInput
-        type={"text"}
-        placeholder={"Search for a country…"}
+        type="text"
+        placeholder="Search for a country…"
         value={filter.query}
         onChange={(e) => {
           setFilter({ ...filter, query: e.target.value });
@@ -37,6 +39,6 @@ const Filter = ({ filter, setFilter }) => {
       />
     </div>
   );
-};
+}
 
 export default Filter;
