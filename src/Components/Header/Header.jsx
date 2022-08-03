@@ -1,11 +1,11 @@
-import React from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import whiteTheme from "./HeaderWhite.module.css";
 import darkTheme from "./HeaderDark.module.css";
-import { useNavigate } from "react-router-dom";
+// eslint-disable-next-line import/no-cycle
 import { DarkModeContext } from "../../App";
-import { useContext } from "react";
 
-const Header = ({ theme }) => {
+function Header({ theme }) {
   const darkMode = useContext(DarkModeContext);
 
   const router = useNavigate();
@@ -19,11 +19,12 @@ const Header = ({ theme }) => {
           onClick={() => {
             router(`/`);
           }}
+          type="button"
         >
           <h1 className={classes.logo}>Where in the world?</h1>
         </button>
 
-        <button onClick={theme} className={classes.navBtn}>
+        <button onClick={theme} className={classes.navBtn} type="button">
           <svg
             width="25"
             height="20"
@@ -38,6 +39,6 @@ const Header = ({ theme }) => {
       </nav>
     </div>
   );
-};
+}
 
 export default Header;

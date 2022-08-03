@@ -6,3 +6,4 @@ src/Components/*
 !src/Components/Card
 !src/Components/API
 !src/Components/Filter
+!src/Components/Header
