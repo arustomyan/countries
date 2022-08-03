@@ -1,15 +1,17 @@
-import React, { useState, useEffect, useContext } from "react";
-import RestApi from "../../Components/API/RestApi.jsx";
+import { useState, useEffect, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import RestApi from "../../Components/API/RestApi";
 import Loader from "../../Components/UI/Loader/Loader";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import darkTheme from "./CountryDetailsDark.module.css";
 import whiteTheme from "./CountryDetailsWhite.module.css";
+// eslint-disable-next-line import/no-cycle
 import MyButton from "../../Components/UI/Button/MyButton";
+// eslint-disable-next-line import/no-cycle
 import ButtonBack from "../../Components/UI/Button/ButtonBack";
+// eslint-disable-next-line import/no-cycle
 import { DarkModeContext } from "../../App";
 
-const CountryDetails = () => {
+function CountryDetails() {
   const router = useNavigate();
 
   const [openCard, setOpenCard] = useState("");
@@ -20,9 +22,7 @@ const CountryDetails = () => {
   const darkMode = useContext(DarkModeContext);
   const classes = darkMode ? whiteTheme : darkTheme;
 
-  const fetchCard = async () => {
-    return await RestApi.getCard(params.country);
-  };
+  const fetchCard = () => RestApi.getCard(params.country);
 
   useEffect(() => {
     fetchCard().then((res) => {
@@ -57,29 +57,35 @@ const CountryDetails = () => {
               <div className={classes.countryInfo}>
                 <p>
                   Native Name:{" "}
-                  {
-                    <span>
-                      {Object.values(
-                        Object.values(openCard.name.nativeName)[0]
-                      ).join(", ")}
-                    </span>
-                  }
-                </p>
-                <p>Population: {<span>{openCard.population}</span>}</p>
-                <p>Region: {<span>{openCard.region}</span>}</p>
-                <p>Sub Region: {<span>{openCard.subregion}</span>}</p>
-                <p>Capital: {<span>{openCard.capital}</span>}</p>
-                <p>
-                  Top Level Domain:{" "}
-                  {<span>{Object.values(openCard.tld)[0]}</span>}
+                  <span>
+                    {Object.values(
+                      Object.values(openCard.name.nativeName)[0]
+                    ).join(", ")}
+                  </span>
                 </p>
                 <p>
-                  Currencies:{" "}
-                  {<span>{Object.values(openCard.currencies)[0].name}</span>}
+                  Population: <span>{openCard.population}</span>
+                </p>
+                <p>
+                  Region: <span>{openCard.region}</span>
+                </p>
+                <p>
+                  Sub Region: <span>{openCard.subregion}</span>
+                </p>
+                <p>
+                  Capital: <span>{openCard.capital}</span>
+                </p>
+                <p>
+                  Top Level Domain:
+                  <span>{Object.values(openCard.tld)[0]}</span>
+                </p>
+                <p>
+                  Currencies:
+                  <span>{Object.values(openCard.currencies)[0].name}</span>
                 </p>
                 <p>
                   Languages:{" "}
-                  {<span>{Object.values(openCard.languages).join(", ")}</span>}
+                  <span>{Object.values(openCard.languages).join(", ")}</span>
                 </p>
               </div>
 
@@ -103,6 +109,6 @@ const CountryDetails = () => {
       )}
     </div>
   );
-};
+}
 
 export default CountryDetails;
