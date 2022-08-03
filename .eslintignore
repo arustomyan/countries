@@ -5,3 +5,4 @@ src/Components/*
 !src/Components/UI
 src/Components/UI/*
 !src/Components/UI/Button
+!src/Components/UI/Input
