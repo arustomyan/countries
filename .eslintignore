@@ -1,4 +1,10 @@
-!src
+!src/Components/
 src/*
-!src/Page
+!src/Components
+
+src/Components/*
+!src/Components/UI
+src/Components/UI/Button/*
+!src/Components/UI/Button/ButtonBack.jsx
+
 
