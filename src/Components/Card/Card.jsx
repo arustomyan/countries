@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import classes from "./CardWhite.module.css";
-import darkMode from "./CardDark.module.css";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import classes from "./CardWhite.module.css";
+// eslint-disable-next-line import/no-cycle
 import { DarkModeContext } from "../../App";
 
-const Card = ({ country }) => {
+function Card({ country }) {
   const darMode = useContext(DarkModeContext);
   const classes1 = darMode
     ? { backgroundColor: "#fff" }
@@ -13,6 +13,7 @@ const Card = ({ country }) => {
   const router = useNavigate();
 
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
     <div
       className={classes.card}
       style={classes1}
@@ -46,6 +47,6 @@ const Card = ({ country }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Card;
