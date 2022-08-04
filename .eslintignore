@@ -9,3 +9,4 @@ src/Components/*
 !src/Components/Header
 !src/Components/Hooks
 !src/Components/router
+!src/Components/AppRouter.jsx
