@@ -1,9 +1,13 @@
-import ErrorPage from "../../Page/ErrorPage/ErrorPage.jsx";
+import ErrorPage from "../../Page/ErrorPage/ErrorPage";
+// eslint-disable-next-line import/no-cycle
 import CountryDetails from "../../Page/CountryDetails/CountryDetails";
-import HomePage from "../../Page/HomePage/HomePage.jsx";
+// eslint-disable-next-line import/no-cycle
+import HomePage from "../../Page/HomePage/HomePage";
 
-export const routes = [
+const routes = [
   { path: "*", element: <ErrorPage /> },
   { path: "/", element: <HomePage /> },
   { path: "/:country", element: <CountryDetails /> },
 ];
+
+export default routes;
