@@ -1,4 +1,4 @@
-import React from "react";
+// eslint-disable-next-line import/no-cycle
 import Card from "./Card/Card";
 
 const style = {

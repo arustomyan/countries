@@ -10,3 +10,4 @@ src/Components/*
 !src/Components/Hooks
 !src/Components/router
 !src/Components/AppRouter.jsx
+!src/Components/CardList.jsx
