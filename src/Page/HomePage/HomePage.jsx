@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Loader from "../../Components/UI/Loader/Loader";
-import RestApi from "../../Components/API/RestApi";
+import CountriesApi from "../../Components/API/CountriesApi";
 import useFetching from "../../Components/Hooks/useFetching";
 import { useCountry } from "../../Components/Hooks/useCountry";
 import Filter from "../../Components/Filter/Filter";
@@ -13,7 +13,7 @@ function HomePage() {
   const searchedCountry = useCountry(arrCountries, filter.select, filter.query);
 
   const [fetchCounties, isLoading] = useFetching(async () => {
-    const response = await RestApi.getAll();
+    const response = await CountriesApi.getAll();
     setArrCountries(response);
   });
 
@@ -23,10 +23,10 @@ function HomePage() {
   }, []);
 
   return (
-    <div>
+    <>
       <Filter filter={filter} setFilter={setFilter} />
       {isLoading ? <Loader /> : <CardList countries={searchedCountry} />}
-    </div>
+    </>
   );
 }
 
