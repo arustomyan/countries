@@ -42,11 +42,11 @@ function CountryDetails() {
           </LinkButton>
 
           <div className={classes.countryDetails}>
-            <div className={classes.imgWrappper}>
+            <div className={classes.imgWrapper}>
               <img
                 src={openCard.flags.png}
                 className={classes.flagCountry}
-                alt=""
+                alt={`Flag of ${openCard.name.common}`}
               />
             </div>
 
