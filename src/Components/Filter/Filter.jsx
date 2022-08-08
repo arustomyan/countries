@@ -12,11 +12,11 @@ function Filter({ filter, setFilter }) {
     : { backgroundColor: "#2B3844" };
 
   const handleChange = (e) => {
-    setFilter({ ...filter, select: e.target.value });
+    setFilter({ ...filter, query: e.target.value });
   };
 
   const handleSelect = (e) => {
-    setFilter({ ...filter, query: e.target.value });
+    setFilter({ ...filter, select: e.target.value });
   };
 
   return (
