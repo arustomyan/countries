@@ -1,19 +1,18 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import darkTheme from "./MyButtonDarkMode.module.css";
 import whiteTheme from "./MyButtonWhiteMode.module.css";
 import DarkModeContext from "../../../context/context";
 
-// eslint-disable-next-line react/prop-types
-function MyButton({ children, ...props }) {
+function LinkButton({ children, link }) {
   const darkMode = useContext(DarkModeContext);
   const classes = darkMode ? whiteTheme : darkTheme;
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <button {...props} className={classes.btn} type="button">
+    <Link className={classes.btn} to={link}>
       {children}
-    </button>
+    </Link>
   );
 }
 
-export default MyButton;
+export default LinkButton;

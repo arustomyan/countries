@@ -1,12 +1,14 @@
 .btn {
   font-size: 16px;
-  line-height: 19px;
   border-radius: 5px;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.104931);
-  padding: 5px 27px 4px 27px;
+  padding: 0 27px;
   height: 40px;
   color: inherit;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
 .btn path {

@@ -51,6 +51,10 @@ a:active {
   outline: none;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   background-color: #f2f2f2;
 }
