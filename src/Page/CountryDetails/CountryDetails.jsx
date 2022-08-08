@@ -4,12 +4,9 @@ import RestApi from "../../Components/API/RestApi";
 import Loader from "../../Components/UI/Loader/Loader";
 import darkTheme from "./CountryDetailsDark.module.css";
 import whiteTheme from "./CountryDetailsWhite.module.css";
-// eslint-disable-next-line import/no-cycle
 import MyButton from "../../Components/UI/Button/MyButton";
-// eslint-disable-next-line import/no-cycle
 import ButtonBack from "../../Components/UI/Button/ButtonBack";
-// eslint-disable-next-line import/no-cycle
-import { DarkModeContext } from "../../App";
+import DarkModeContext from "../../context/context";
 
 function CountryDetails() {
   const router = useNavigate();

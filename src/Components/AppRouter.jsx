@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-// eslint-disable-next-line import/no-cycle
 import routes from "./router/router";
 
 function AppRouter({ darkMode }) {

@@ -3,9 +3,7 @@ import Loader from "../../Components/UI/Loader/Loader";
 import RestApi from "../../Components/API/RestApi";
 import useFetching from "../../Components/Hooks/useFetching";
 import { useCountry } from "../../Components/Hooks/useCountry";
-// eslint-disable-next-line import/no-cycle
 import Filter from "../../Components/Filter/Filter";
-// eslint-disable-next-line import/no-cycle
 import CardList from "../../Components/CardList";
 
 function HomePage() {

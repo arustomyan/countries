@@ -4,6 +4,7 @@ import "./styles/App.css";
 import Header from "./Components/Header/Header";
 import HomePage from "./Page/HomePage/HomePage";
 import DarkModeContext from "./context/context";
+import CountryDetails from "./Page/CountryDetails/CountryDetails";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,6 +20,7 @@ function App() {
         <Header theme={theme} />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/:country" element={<CountryDetails />} />
         </Routes>
       </BrowserRouter>
     </DarkModeContext.Provider>
