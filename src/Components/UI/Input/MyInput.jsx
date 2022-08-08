@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import darkTheme from "./MyInputDarkMode.module.css";
 import whiteTheme from "./MyInputWhiteMode.module.css";
-// eslint-disable-next-line import/no-cycle
-import { DarkModeContext } from "../../../App";
+import DarkModeContext from "../../../context/context";
 
 const MyInput = React.forwardRef((props, ref) => {
   const darkMode = useContext(DarkModeContext);

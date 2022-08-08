@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./CardWhite.module.css";
-// eslint-disable-next-line import/no-cycle
-import { DarkModeContext } from "../../App";
+import DarkModeContext from "../../context/context";
 
 function Card({ country }) {
   const darMode = useContext(DarkModeContext);

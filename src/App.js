@@ -1,11 +1,9 @@
-import React from "react";
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./styles/App.css";
 import Header from "./Components/Header/Header";
-import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./Components/AppRouter";
-import { useState } from "react";
-
-export const DarkModeContext = React.createContext({});
+import HomePage from "./Page/HomePage/HomePage";
+import DarkModeContext from "./context/context";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,7 +17,9 @@ function App() {
     <DarkModeContext.Provider value={darkMode}>
       <BrowserRouter>
         <Header theme={theme} />
-        <AppRouter />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
       </BrowserRouter>
     </DarkModeContext.Provider>
   );

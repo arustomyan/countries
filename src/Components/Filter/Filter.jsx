@@ -3,8 +3,7 @@ import { useContext } from "react";
 import MyInput from "../UI/Input/MyInput";
 import MySelect from "../UI/Select/MySelect";
 import classes from "./Filter.module.css";
-// eslint-disable-next-line import/no-cycle
-import { DarkModeContext } from "../../App";
+import DarkModeContext from "../../context/context";
 
 function Filter({ filter, setFilter }) {
   const darkMode = useContext(DarkModeContext);

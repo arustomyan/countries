@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import darkTheme from "./MyButtonDarkMode.module.css";
 import whiteTheme from "./MyButtonWhiteMode.module.css";
-// eslint-disable-next-line import/no-cycle
-import { DarkModeContext } from "../../../App";
+import DarkModeContext from "../../../context/context";
 
 // eslint-disable-next-line react/prop-types
 function MyButton({ children, ...props }) {

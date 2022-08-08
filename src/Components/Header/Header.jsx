@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import whiteTheme from "./HeaderWhite.module.css";
 import darkTheme from "./HeaderDark.module.css";
-// eslint-disable-next-line import/no-cycle
-import { DarkModeContext } from "../../App";
+import DarkModeContext from "../../context/context";
 
 function Header({ theme }) {
   const darkMode = useContext(DarkModeContext);
