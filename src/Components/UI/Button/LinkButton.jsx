@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import darkTheme from "./MyButtonDarkMode.module.css";
-import whiteTheme from "./MyButtonWhiteMode.module.css";
+import darkTheme from "./LinkButtonDarkMode.module.css";
+import whiteTheme from "./LinkButtonWhiteMode.module.css";
 import DarkModeContext from "../../../context/context";
 
 function LinkButton({ children, link }) {
