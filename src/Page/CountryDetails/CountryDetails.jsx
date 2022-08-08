@@ -87,11 +87,11 @@ function CountryDetails() {
                   <span>{Object.values(openCard.languages).join(", ")}</span>
                 </p>
               </div>
-
               {border && (
                 <div className={classes.countryBorder}>
+                  <p>Border Countries: </p>
+
                   <ul>
-                    <p>Border Countries: </p>
                     {border.map((item) => (
                       <li>
                         <LinkButton key={item} link={`/${item}`}>

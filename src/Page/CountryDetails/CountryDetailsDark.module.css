@@ -51,7 +51,7 @@
 }
 
 .countryBorder {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   row-gap: 12px;
 }
