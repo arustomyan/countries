@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import RestApi from "../../Components/API/RestApi";
+import CountriesApi from "../../Components/API/CountriesApi";
 import Loader from "../../Components/UI/Loader/Loader";
 import darkTheme from "./CountryDetailsDark.module.css";
 import whiteTheme from "./CountryDetailsWhite.module.css";
@@ -19,7 +19,7 @@ function CountryDetails() {
   const darkMode = useContext(DarkModeContext);
   const classes = darkMode ? whiteTheme : darkTheme;
 
-  const fetchCard = () => RestApi.getCard(params.country);
+  const fetchCard = () => CountriesApi.getCard(params.country);
 
   useEffect(() => {
     fetchCard().then((res) => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default class RestApi {
+export default class CountriesApi {
   static async getAll() {
     const response = await axios.get(
       "https://restcountries.com/v3.1/all?fields=name,capital,currencies,flags,region,population,cca3"
