@@ -1,14 +1,21 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import darkTheme from "./MyInputDarkMode.module.css";
 import whiteTheme from "./MyInputWhiteMode.module.css";
 import DarkModeContext from "../../../context/context";
 
-const MyInput = React.forwardRef((props, ref) => {
+function MyInput({ value, type, onChange, placeholder }) {
   const darkMode = useContext(DarkModeContext);
   const classes = darkMode ? whiteTheme : darkTheme;
 
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <input ref={ref} className={classes.search} {...props} />;
-});
+  return (
+    <input
+      className={classes.search}
+      value={value}
+      type={type}
+      onChange={onChange}
+      placeholder={placeholder}
+    />
+  );
+}
 
 export default MyInput;
