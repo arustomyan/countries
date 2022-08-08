@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import whiteTheme from "./HeaderWhite.module.css";
 import darkTheme from "./HeaderDark.module.css";
 import DarkModeContext from "../../context/context";
@@ -7,21 +7,14 @@ import DarkModeContext from "../../context/context";
 function Header({ theme }) {
   const darkMode = useContext(DarkModeContext);
 
-  const router = useNavigate();
-
   const classes = darkMode ? whiteTheme : darkTheme;
 
   return (
-    <div className={classes.container}>
+    <header className={classes.container}>
       <nav className={classes.navBar}>
-        <button
-          onClick={() => {
-            router(`/`);
-          }}
-          type="button"
-        >
+        <Link to="/">
           <h1 className={classes.logo}>Where in the world?</h1>
-        </button>
+        </Link>
 
         <button onClick={theme} className={classes.navBtn} type="button">
           <svg
@@ -36,7 +29,7 @@ function Header({ theme }) {
           Dark Mode
         </button>
       </nav>
-    </div>
+    </header>
   );
 }
 
