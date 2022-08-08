@@ -28,11 +28,11 @@ function Card({ country }) {
               {country.population}
             </p>
             <p className={classes.cardText}>
-              <span className={classes.cardSpan}>Region: </span>{" "}
+              <span className={classes.cardSpan}>Region: </span>
               {country.region}
             </p>
             <p className={classes.cardText}>
-              <span className={classes.cardSpan}>Capital: </span>{" "}
+              <span className={classes.cardSpan}>Capital: </span>
               {!(country.capital === undefined)
                 ? country.capital[0]
                 : "no capital"}
