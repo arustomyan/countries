@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-cycle
 import Card from "./Card/Card";
 
 const style = {
@@ -16,11 +15,11 @@ const style = {
 
 function CardList({ countries }) {
   return (
-    <div style={style}>
+    <ul style={style}>
       {countries.map((country) => (
         <Card country={country} key={country.cca3} />
       ))}
-    </div>
+    </ul>
   );
 }
 
