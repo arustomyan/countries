@@ -10,7 +10,7 @@ export default class CountriesApi {
 
   static async getCard(country) {
     const response = await axios.get(
-      `https://restcountries.com/v3.1/alpha/${country}`
+      `https://restcountries.com/v3.1/alpha/${country}?fields=name,capital,currencies,tld,subregion,region,population,flags,borders,languages`
     );
     return response.data;
   }

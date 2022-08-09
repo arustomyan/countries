@@ -37,13 +37,15 @@
 }
 
 .countryInfo {
-  /* min-height: 250px; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 160px;
   column-gap: 50px;
   margin-bottom: 68px;
+}
+.countryInfo h3 {
+  display: inline;
 }
 
 .countryInfo span {
